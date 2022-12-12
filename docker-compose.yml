@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  k4r-camel:
+    build:
+      context: ./k4r-platform
+      dockerfile: ./Dockerfile
+    image: registry.gitlab.com/knowledge4retail/k4r-camel/k4r-camel:${CI_COMMIT_TAG:-latest}
